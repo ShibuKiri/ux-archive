@@ -1,61 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="R-001 — An independent UX review of Zama's homepage." />
-  <title>R-001 — Zama Homepage UX Review · UX Archive</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#F7F7F5;--text:#161616;--secondary:#72706B;--divider:#E5E4DF;--brand:#245C73}
-    *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text)}
-    body{font-family:'Hanken Grotesk',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;font-size:16px;line-height:24px}
-    .wrap{max-width:760px;margin:0 auto;padding:48px 24px}
-    .mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;line-height:16px;letter-spacing:.02em}
-    a{color:inherit}.breadcrumb{display:inline-flex;gap:8px;color:var(--secondary);text-decoration:none}.breadcrumb:hover{color:var(--brand)}
-    header{margin-top:72px}.eyebrow{color:var(--secondary);margin-bottom:20px}
-    h1{font-size:48px;line-height:56px;letter-spacing:-.035em;font-weight:600;margin:0}
-    .lead{font-size:20px;line-height:30px;color:var(--secondary);max-width:660px;margin:24px 0 0}
-    .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;padding:24px 0;border-top:1px solid var(--divider);border-bottom:1px solid var(--divider)}
-    .meta-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;line-height:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--secondary);margin-bottom:8px}.meta-value{font-size:15px;line-height:22px}
-    .section{margin-top:64px}.section-label{color:var(--secondary);margin-bottom:24px}
-    .contents{list-style:none;margin:0;padding:0;border-top:1px solid var(--divider)}.contents li{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--divider)}.contents span:first-child{color:var(--secondary)}
-    .cta{margin-top:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;border-top:1px solid var(--divider);border-bottom:1px solid var(--divider);text-decoration:none}.cta-title{font-size:20px;font-weight:600}.cta-meta{color:var(--secondary);margin-top:4px}.cta-arrow{color:var(--brand);font-size:24px;transition:transform .15s ease}.cta:hover .cta-arrow{transform:translateX(4px)}
-    footer{margin-top:96px;padding-top:24px;border-top:1px solid var(--divider);display:flex;justify-content:space-between;gap:24px;color:var(--secondary)}
-    @media(max-width:640px){.wrap{padding:32px 20px}header{margin-top:56px}h1{font-size:36px;line-height:44px}.lead{font-size:18px;line-height:28px}.meta{grid-template-columns:1fr;gap:20px}.section,.cta{margin-top:48px}footer{margin-top:72px;flex-direction:column}}
-    @media(prefers-reduced-motion:reduce){.cta-arrow{transition:none}}a:focus-visible{outline:2px solid var(--brand);outline-offset:4px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zama — Homepage UX Review</title>
+
+<link rel="icon" href="../../favicon.ico">
+<link rel="canonical" href="https://shibukiri.github.io/ux-archive/reviews/001-zama/">
+<meta name="theme-color" content="#F7F7F5">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zama — Homepage UX Review">
+<meta property="og:description" content="Five observations on why Zama's own trust story doesn't reach the business buyer it's written for.">
+<meta property="og:image" content="https://shibukiri.github.io/ux-archive/assets/og-r001-zama.png">
+<meta property="og:url" content="https://shibukiri.github.io/ux-archive/reviews/001-zama/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zama — Homepage UX Review">
+<meta name="twitter:description" content="Five observations on why Zama's own trust story doesn't reach the business buyer it's written for.">
+<meta name="twitter:image" content="https://shibukiri.github.io/ux-archive/assets/og-r001-zama.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F7F7F5;--surface:#FFFFFF;--primary:#161616;--secondary:#72706B;--divider:#E5E4DF;--brand:#245C73;--brand-tint-10:#EEF4F7}
+  *{box-sizing:border-box}html,body{margin:0;padding:0}body{background:var(--bg);color:var(--primary);font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
+  .mono{font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;font-size:12px;font-weight:500;line-height:16px;color:var(--secondary)}
+  .wrap{max-width:760px;margin:0 auto;padding:96px 24px}.breadcrumb{margin-bottom:40px}.breadcrumb a{color:var(--secondary);text-decoration:none;transition:color .15s ease}.breadcrumb a:hover{color:var(--brand)}
+  h1{font-size:40px;font-weight:600;letter-spacing:-.01em;line-height:48px;margin:0 0 20px}.lead{font-size:20px;line-height:32px;color:var(--secondary);max-width:56ch;margin:0}
+  .meta-row{display:flex;flex-wrap:wrap;gap:32px;margin-top:40px;padding-top:32px;border-top:1px solid var(--divider)}.meta-item .mono{display:block;margin-bottom:6px}.meta-item p{margin:0;font-size:16px;line-height:24px}
+  .section-label{margin:40px 0 8px;padding-top:32px;border-top:1px solid var(--divider)}.toc-item{display:grid;grid-template-columns:40px 1fr;gap:24px;padding:24px 0}.toc-num{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;line-height:16px;color:var(--secondary)}.toc-title{font-size:16px;font-weight:400;line-height:24px}
+  .btn{display:inline-flex;align-items:center;gap:10px;background:var(--brand);color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12px;line-height:16px;letter-spacing:.06em;text-transform:uppercase;padding:15px 26px;border-radius:2px;text-decoration:none;transition:background .15s ease}.btn:hover{background:#1c4a5c}.btn:focus-visible{outline:2px solid var(--brand);outline-offset:4px}
+  footer{margin-top:72px;padding-top:32px;border-top:1px solid var(--divider)}.micro{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:400;line-height:16px;color:var(--secondary);margin:0 0 8px}.micro a{color:var(--secondary);text-decoration:none;transition:color .15s ease}.micro a:hover{color:var(--brand)}
+  @media(prefers-reduced-motion:reduce){.btn,.breadcrumb a,.micro a{transition:none}}@media(max-width:640px){.wrap{padding:64px 20px}.meta-row{gap:24px}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <nav><a class="breadcrumb mono" href="../../">← UX Archive</a></nav>
-    <main>
-      <header>
-        <div class="eyebrow mono">R-001 · Review</div>
-        <h1>Zama — Homepage</h1>
-        <p class="lead">Built for enterprise. Written for engineers.</p>
-      </header>
-      <section class="meta" aria-label="Review metadata">
-        <div><div class="meta-label">Company</div><div class="meta-value">Zama</div></div>
-        <div><div class="meta-label">Area</div><div class="meta-value">Homepage</div></div>
-        <div><div class="meta-label">Target</div><div class="meta-value">Enterprise users</div></div>
-      </section>
-      <section class="section">
-        <div class="section-label mono">Contents</div>
-        <ol class="contents">
-          <li><span class="mono">01</span><span>First impression</span></li>
-          <li><span class="mono">02</span><span>Positioning and clarity</span></li>
-          <li><span class="mono">03</span><span>Trust and enterprise readiness</span></li>
-          <li><span class="mono">04</span><span>Recommendations</span></li>
-        </ol>
-      </section>
-      <a class="cta" href="./R-001-Zama-Homepage-UX-Review.pdf">
-        <div><div class="cta-title">Read the full review</div><div class="cta-meta mono">R-001 · PDF</div></div><span class="cta-arrow">→</span>
-      </a>
-    </main>
-    <footer><div class="mono">Independent UX Archive</div><div class="mono">© 2026 ShibuKiri</div></footer>
-  </div>
+<div class="wrap">
+  <nav class="breadcrumb mono" aria-label="Breadcrumb"><a href="../../">UX Archive</a> &nbsp;/&nbsp; <a href="../../#cat-reviews">Reviews</a> &nbsp;/&nbsp; R-001</nav>
+  <header><h1>Built For Enterprise.<br>Written For Engineers.</h1><p class="lead">Five observations on why Zama's own trust story doesn't reach the business buyer it's written for.</p></header>
+  <main>
+    <div class="meta-row">
+      <div class="meta-item"><span class="mono">Company</span><p>Zama</p></div><div class="meta-item"><span class="mono">Area</span><p>Homepage</p></div><div class="meta-item"><span class="mono">Target</span><p>Enterprise Decision-Makers</p></div><div class="meta-item"><span class="mono">Reading Time</span><p>≈ 6 min</p></div>
+    </div>
+    <div class="section-label mono">Inside this review</div>
+    <div class="toc"><div class="toc-item"><span class="toc-num">01</span><span class="toc-title">Homepage Messaging</span></div><div class="toc-item"><span class="toc-num">02</span><span class="toc-title">Navigation</span></div><div class="toc-item"><span class="toc-num">03</span><span class="toc-title">Trust Signals</span></div><div class="toc-item"><span class="toc-num">04</span><span class="toc-title">Security Communication</span></div><div class="toc-item"><span class="toc-num">05</span><span class="toc-title">Positioning</span></div></div>
+    <a class="btn" href="./Zama-Homepage-UX-Review.pdf" style="margin-top:40px;">Open Review →</a>
+  </main>
+  <footer><p class="micro">Maintained by German</p><p class="micro"><a href="#">Behance</a> · <a href="#">X</a></p><p class="micro">Independent work. Not affiliated with the products covered.</p></footer>
+</div>
 </body>
 </html>
