@@ -1,119 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UX Archive — by ShibuKiri</title>
-    <style>
-        :root {
-            --bg: #F7F7F5;
-            --surface: #FFFFFF;
-            --text: #161616;
-            --text-secondary: #72706B;
-            --divider: #E5E4DF;
-            --brand: #245C73;
-            --brand-tint: #EEF4F7;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.5;
-            padding: 2rem;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        header {
-            margin-bottom: 3rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--divider);
-        }
-        h1 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--brand);
-        }
-        .subtitle {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-top: 0.25rem;
-            font-family: 'IBM Plex Mono', monospace;
-        }
-        .review-list {
-            list-style: none;
-        }
-        .review-item {
-            background: var(--surface);
-            border: 1px solid var(--divider);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            transition: border-color 0.2s;
-        }
-        .review-item:hover { border-color: var(--brand); }
-        .review-item h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .review-item h2 a {
-            color: var(--brand);
-            text-decoration: none;
-        }
-        .review-item h2 a:hover { text-decoration: underline; }
-        .review-item p {
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-        }
-        .tag {
-            display: inline-block;
-            background: var(--brand-tint);
-            color: var(--brand);
-            font-size: 0.8rem;
-            font-weight: 500;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            margin-right: 0.5rem;
-            font-family: 'IBM Plex Mono', monospace;
-        }
-        .empty {
-            color: var(--text-secondary);
-            font-style: italic;
-            margin-top: 2rem;
-        }
-        footer {
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--divider);
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="A running record of independent product analysis." />
+  <title>UX Archive — by ShibuKiri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#F7F7F5;--surface:#FFF;--text:#161616;--secondary:#72706B;--divider:#E5E4DF;--brand:#245C73;--brand-tint-10:#EEF4F7}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text)}
+    body{font-family:'Hanken Grotesk',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;font-size:16px;line-height:24px}
+    .wrap{max-width:880px;margin:0 auto;padding:56px 24px 48px}
+    .mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;line-height:16px;letter-spacing:.02em}
+    header{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}
+    .brand{color:var(--text)}
+    .stat{color:var(--secondary);white-space:nowrap}
+    .intro{max-width:680px;margin-top:72px}
+    h1{font-size:40px;line-height:48px;letter-spacing:-.025em;font-weight:600;margin:0}
+    .lead{font-size:18px;line-height:28px;color:var(--secondary);max-width:620px;margin:20px 0 0}
+    .archive{margin-top:64px;padding-top:32px;border-top:1px solid var(--divider)}
+    .archive-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:24px}
+    .archive-count{font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:16px;color:var(--secondary)}
+    .archive-columns,.case{display:grid;grid-template-columns:72px minmax(0,1fr) 160px 24px;gap:24px}
+    .archive-columns{padding-bottom:8px;border-bottom:1px solid var(--divider)}
+    .column-label{font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;font-size:10px;font-weight:500;line-height:16px;color:var(--secondary)}
+    .case{align-items:center;padding:24px 0;border-bottom:1px solid var(--divider);text-decoration:none;color:inherit}
+    .case-id{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;line-height:16px;color:var(--secondary)}
+    .case-title{font-size:20px;font-weight:600;line-height:28px;transition:color .15s ease}
+    .case-area{font-size:14px;line-height:20px;color:var(--secondary)}
+    .case-arrow{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;line-height:16px;color:var(--secondary);text-align:right;transition:transform .15s ease,color .15s ease}
+    .case:hover .case-title{color:var(--brand)}
+    .case:hover .case-arrow{transform:translateX(4px);color:var(--brand)}
+    a:focus-visible{outline:2px solid var(--brand);outline-offset:4px}
+    footer{margin-top:96px;padding-top:24px;border-top:1px solid var(--divider);display:flex;justify-content:space-between;gap:24px;color:var(--secondary)}
+    .micro{font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:16px}
+    @media(max-width:640px){.wrap{padding:32px 20px 32px}.intro{margin-top:56px}h1{font-size:32px;line-height:40px}.lead{font-size:16px;line-height:24px}.archive{margin-top:48px}.archive-columns,.case{grid-template-columns:56px minmax(0,1fr) 88px;gap:16px}.archive-columns>:last-child,.case-arrow{display:none}.case-title{font-size:18px;line-height:24px}.case-area{font-size:13px;line-height:20px}footer{margin-top:72px;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){.case-title,.case-arrow{transition:none}}
+  </style>
 </head>
 <body>
+  <div class="wrap">
     <header>
-        <h1>UX Archive</h1>
-        <p class="subtitle">by ShibuKiri · Public reviews & audits</p>
+      <div class="mono brand">UX Archive</div>
+      <div class="mono stat">1 entry</div>
     </header>
 
-    <ul class="review-list">
-        <!-- Список ревью будет обновляться вручную -->
-        <li class="review-item">
-            <h2><a href="/ux-archive/reviews/001-zama/">Zama — Homepage UX Review</a></h2>
-            <p>Enterprise-focused review of the main landing page. Identifies critical clarity and trust issues for institutional users.</p>
-            <span class="tag">Enterprise</span>
-            <span class="tag">Homepage</span>
-        </li>
-        <!-- Добавляй новые элементы по мере создания новых ревью -->
-    </ul>
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">A running record of independent product analysis.</h1>
+      <p class="lead">Focused reviews of specific product surfaces, flows, and decisions — documented as a growing archive.</p>
+    </section>
 
-    <!-- Если ревью ещё нет, показывается это сообщение -->
-    <!-- <p class="empty">No reviews published yet. Check back soon.</p> -->
+    <main>
+      <section class="archive" aria-labelledby="archive-title">
+        <div class="archive-head">
+          <div class="mono" id="archive-title">Archive</div>
+          <div class="archive-count">1 entry</div>
+        </div>
+        <div class="archive-columns" aria-hidden="true">
+          <span class="column-label">ID</span><span class="column-label">Project</span><span class="column-label">Area</span><span></span>
+        </div>
+        <div class="cases">
+          <a class="case" href="./reviews/001-zama/">
+            <span class="case-id">R-001</span><span class="case-title">Zama</span><span class="case-area">Homepage</span><span class="case-arrow">→</span>
+          </a>
+        </div>
+      </section>
+    </main>
 
     <footer>
-        <p>© 2026 ShibuKiri · Built with GitHub Pages</p>
+      <div class="micro">Independent UX Archive</div>
+      <div class="micro">© 2026 ShibuKiri</div>
     </footer>
+  </div>
 </body>
 </html>
