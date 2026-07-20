@@ -1,1 +1,61 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="R-001 — An independent UX review of Zama's homepage." />
+  <title>R-001 — Zama Homepage UX Review · UX Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#F7F7F5;--text:#161616;--secondary:#72706B;--divider:#E5E4DF;--brand:#245C73}
+    *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text)}
+    body{font-family:'Hanken Grotesk',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;font-size:16px;line-height:24px}
+    .wrap{max-width:760px;margin:0 auto;padding:48px 24px}
+    .mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;line-height:16px;letter-spacing:.02em}
+    a{color:inherit}.breadcrumb{display:inline-flex;gap:8px;color:var(--secondary);text-decoration:none}.breadcrumb:hover{color:var(--brand)}
+    header{margin-top:72px}.eyebrow{color:var(--secondary);margin-bottom:20px}
+    h1{font-size:48px;line-height:56px;letter-spacing:-.035em;font-weight:600;margin:0}
+    .lead{font-size:20px;line-height:30px;color:var(--secondary);max-width:660px;margin:24px 0 0}
+    .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;padding:24px 0;border-top:1px solid var(--divider);border-bottom:1px solid var(--divider)}
+    .meta-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;line-height:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--secondary);margin-bottom:8px}.meta-value{font-size:15px;line-height:22px}
+    .section{margin-top:64px}.section-label{color:var(--secondary);margin-bottom:24px}
+    .contents{list-style:none;margin:0;padding:0;border-top:1px solid var(--divider)}.contents li{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--divider)}.contents span:first-child{color:var(--secondary)}
+    .cta{margin-top:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;border-top:1px solid var(--divider);border-bottom:1px solid var(--divider);text-decoration:none}.cta-title{font-size:20px;font-weight:600}.cta-meta{color:var(--secondary);margin-top:4px}.cta-arrow{color:var(--brand);font-size:24px;transition:transform .15s ease}.cta:hover .cta-arrow{transform:translateX(4px)}
+    footer{margin-top:96px;padding-top:24px;border-top:1px solid var(--divider);display:flex;justify-content:space-between;gap:24px;color:var(--secondary)}
+    @media(max-width:640px){.wrap{padding:32px 20px}header{margin-top:56px}h1{font-size:36px;line-height:44px}.lead{font-size:18px;line-height:28px}.meta{grid-template-columns:1fr;gap:20px}.section,.cta{margin-top:48px}footer{margin-top:72px;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){.cta-arrow{transition:none}}a:focus-visible{outline:2px solid var(--brand);outline-offset:4px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav><a class="breadcrumb mono" href="../../">← UX Archive</a></nav>
+    <main>
+      <header>
+        <div class="eyebrow mono">R-001 · Review</div>
+        <h1>Zama — Homepage</h1>
+        <p class="lead">Built for enterprise. Written for engineers.</p>
+      </header>
+      <section class="meta" aria-label="Review metadata">
+        <div><div class="meta-label">Company</div><div class="meta-value">Zama</div></div>
+        <div><div class="meta-label">Area</div><div class="meta-value">Homepage</div></div>
+        <div><div class="meta-label">Target</div><div class="meta-value">Enterprise users</div></div>
+      </section>
+      <section class="section">
+        <div class="section-label mono">Contents</div>
+        <ol class="contents">
+          <li><span class="mono">01</span><span>First impression</span></li>
+          <li><span class="mono">02</span><span>Positioning and clarity</span></li>
+          <li><span class="mono">03</span><span>Trust and enterprise readiness</span></li>
+          <li><span class="mono">04</span><span>Recommendations</span></li>
+        </ol>
+      </section>
+      <a class="cta" href="./R-001-Zama-Homepage-UX-Review.pdf">
+        <div><div class="cta-title">Read the full review</div><div class="cta-meta mono">R-001 · PDF</div></div><span class="cta-arrow">→</span>
+      </a>
+    </main>
+    <footer><div class="mono">Independent UX Archive</div><div class="mono">© 2026 ShibuKiri</div></footer>
+  </div>
+</body>
+</html>
