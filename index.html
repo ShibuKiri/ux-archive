@@ -60,7 +60,7 @@
 
     .system-nav {
       grid-column: 2 / span 9;
-      color: var(--secondary);
+      color: var(--text);
     }
 
     .intro {
@@ -162,6 +162,8 @@
       grid-column: 2 / span 9;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      gap: 24px;
       margin-top: 96px;
       padding-top: 24px;
       border-top: 1px solid var(--divider);
@@ -174,6 +176,26 @@
       line-height: 16px;
     }
 
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color .15s ease, border-color .15s ease;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+    }
+
+    .footer-links a:hover {
+      color: var(--brand);
+      border-bottom-color: var(--divider);
+    }
+
     a:focus-visible {
       outline: 2px solid var(--brand);
       outline-offset: 4px;
@@ -184,6 +206,7 @@
       .system-nav, .intro, .archive, footer { grid-column: 1 / -1; }
       .intro { max-width: 680px; }
       .archive-columns, .case { grid-template-columns: 72px minmax(0, 1fr) 140px; }
+      footer { flex-direction: column; align-items: flex-start; }
     }
 
     @media (max-width: 640px) {
@@ -200,7 +223,10 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .case { transition: none; }
+      .case,
+      .footer-links a {
+        transition: none;
+      }
     }
   </style>
 </head>
@@ -261,6 +287,14 @@
 
       <footer>
         <div class="micro">Independent UX Archive</div>
+
+        <div class="footer-links" aria-label="Social links">
+          <a class="micro" href="https://x.com/Shibu_Wa" target="_blank" rel="noreferrer">X</a>
+          <a class="micro" href="https://www.linkedin.com/in/shibuwa" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="micro" href="https://www.behance.net/ShibuWa" target="_blank" rel="noreferrer">Behance</a>
+          <a class="micro" href="https://github.com/ShibuKiri" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+
         <div class="micro">© 2026 ShibuKiri</div>
       </footer>
     </div>
