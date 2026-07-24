@@ -1,30 +1,226 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="theme-color" content="#F7F7F5"><title>404 — UX Archive</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#F7F7F5;--text:#161616;--secondary:#72706B;--divider:#E5E4DF;--brand:#245C73;--gutter:24px}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text)}body{font-family:'Hanken Grotesk',sans-serif;font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased}.frame{width:min(calc(100% - 192px),1248px);margin:0 auto;padding:96px 0 48px}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gutter)}.mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;line-height:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--secondary)}.system-nav{grid-column:2/span 9}.system-nav a{color:var(--secondary);text-decoration:none;transition:color .15s}.system-nav a:hover{color:var(--brand)}
-.error{grid-column:2/span 6;margin-top:96px}.code{margin-bottom:24px}h1{font-size:40px;line-height:48px;letter-spacing:-.025em;font-weight:600;margin:0}.lead{font-size:18px;line-height:28px;color:var(--secondary);max-width:520px;margin:24px 0 0}.back{display:inline-flex;align-items:center;gap:10px;margin-top:40px;color:var(--brand);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;line-height:16px;letter-spacing:.06em;text-transform:uppercase;background:none;border:0;padding:0;cursor:pointer}.back-arrow{transition:transform .15s ease}.back:hover .back-arrow{transform:translateX(-4px)}
-footer{grid-column:2/span 9;margin-top:96px;padding-top:24px;border-top:1px solid var(--divider);display:flex;justify-content:space-between;color:var(--secondary)}.micro{font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:16px;color:var(--secondary)}button:focus-visible,a:focus-visible{outline:2px solid var(--brand);outline-offset:4px}
-@media(max-width:900px){.frame{width:calc(100% - 48px);padding-top:64px}.system-nav,.error,footer{grid-column:1/-1}.error{max-width:680px}}
-@media(max-width:640px){.frame{width:calc(100% - 40px);padding-top:48px}.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.error{margin-top:64px}h1{font-size:36px;line-height:44px}.lead{font-size:18px;line-height:28px}.back{margin-top:32px}footer{margin-top:64px;flex-direction:column;gap:8px}}
-@media(prefers-reduced-motion:reduce){.back-arrow,.system-nav a{transition:none}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F7F7F5">
+  <title>404 — UX Archive</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F7F7F5;
+      --text: #161616;
+      --secondary: #72706B;
+      --divider: #E5E4DF;
+      --brand: #245C73;
+      --gutter: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .frame {
+      width: min(calc(100% - 192px), 1248px);
+      margin: 0 auto;
+      padding: 96px 0 48px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: var(--gutter);
+    }
+
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--secondary);
+    }
+
+    .system-nav {
+      grid-column: 2 / span 9;
+    }
+
+    .system-nav a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color .15s;
+    }
+
+    .system-nav a:hover {
+      color: var(--brand);
+    }
+
+    .error {
+      grid-column: 2 / span 6;
+      margin-top: 96px;
+    }
+
+    .code {
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -.025em;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .lead {
+      font-size: 18px;
+      line-height: 28px;
+      color: var(--secondary);
+      max-width: 520px;
+      margin: 24px 0 0;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 40px;
+      color: var(--brand);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      background: none;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .back-arrow {
+      transition: transform .15s ease;
+    }
+
+    .back:hover .back-arrow {
+      transform: translateX(-4px);
+    }
+
+    footer {
+      grid-column: 2 / span 9;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 96px;
+      padding-top: 24px;
+      border-top: 1px solid var(--divider);
+      color: var(--secondary);
+    }
+
+    .micro {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      line-height: 16px;
+      color: var(--secondary);
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--brand);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .frame { width: calc(100% - 48px); padding-top: 64px; }
+      .system-nav, .error, footer { grid-column: 1 / -1; }
+      .error { max-width: 680px; }
+    }
+
+    @media (max-width: 640px) {
+      .frame { width: calc(100% - 40px); padding-top: 48px; }
+      .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+      .error { margin-top: 64px; }
+      h1 { font-size: 36px; line-height: 44px; }
+      .lead { font-size: 18px; line-height: 28px; }
+      .back { margin-top: 32px; }
+      footer { margin-top: 64px; flex-direction: column; gap: 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .back-arrow,
+      .system-nav a {
+        transition: none;
+      }
+    }
+  </style>
 </head>
-<body><div class="frame"><div class="grid">
-<nav class="system-nav mono" aria-label="Archive navigation"><a href="/ux-archive/">UX Archive</a></nav>
-<main class="error"><div class="code mono">Error 404</div><h1>Page not found.</h1><p class="lead">The page you're looking for doesn't exist or hasn't been published yet.</p><button class="back" id="back-action" type="button"><span class="back-arrow" id="back-arrow">←</span><span id="back-label">Go back</span></button></main>
-<footer><div class="micro">Independent UX Archive</div><div class="micro">© 2026 ShibuKiri</div></footer>
-</div></div>
-<script>
-const backAction=document.getElementById('back-action');
-const backLabel=document.getElementById('back-label');
-const backArrow=document.getElementById('back-arrow');
-let hasInternalReferrer=false;
-try{hasInternalReferrer=Boolean(document.referrer)&&new URL(document.referrer).origin===window.location.origin}catch(e){}
-if(!hasInternalReferrer){backLabel.textContent='Back to archive';backArrow.hidden=true}
-backAction.addEventListener('click',()=>{if(hasInternalReferrer){history.back()}else{window.location.href='/ux-archive/'}});
-</script>
-</body></html>
+<body>
+  <div class="frame">
+    <div class="grid">
+      <nav class="system-nav mono" aria-label="Archive navigation">
+        <a href="/ux-archive/">UX Archive</a>
+      </nav>
+
+      <main class="error">
+        <div class="code mono">Error 404</div>
+        <h1>Page not found.</h1>
+        <p class="lead">The page you're looking for doesn't exist or hasn't been published yet.</p>
+        <button class="back" id="back-action" type="button">
+          <span class="back-arrow" id="back-arrow">←</span>
+          <span id="back-label">Go back</span>
+        </button>
+      </main>
+
+      <footer>
+        <div class="micro">Independent UX Archive</div>
+        <div class="micro">© 2026 ShibuKiri</div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const backAction = document.getElementById('back-action');
+    const backLabel = document.getElementById('back-label');
+    const backArrow = document.getElementById('back-arrow');
+
+    let hasInternalReferrer = false;
+    try {
+      hasInternalReferrer = Boolean(document.referrer) && new URL(document.referrer).origin === window.location.origin;
+    } catch (error) {
+      hasInternalReferrer = false;
+    }
+
+    if (!hasInternalReferrer) {
+      backLabel.textContent = 'Back to archive';
+      backArrow.hidden = true;
+    }
+
+    backAction.addEventListener('click', () => {
+      if (hasInternalReferrer) {
+        history.back();
+      } else {
+        window.location.href = '/ux-archive/';
+      }
+    });
+  </script>
+</body>
+</html>
