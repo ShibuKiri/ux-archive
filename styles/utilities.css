@@ -1,0 +1,19 @@
+.u-center{
+    text-align:center;
+}
+
+.u-hidden{
+    display:none!important;
+}
+
+.u-secondary{
+    color:var(--color-text-secondary);
+}
+
+.u-width-reading{
+    max-width:var(--width-reading);
+}
+
+.u-width-title{
+    max-width:var(--width-title);
+}
