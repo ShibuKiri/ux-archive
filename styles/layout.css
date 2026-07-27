@@ -1,4 +1,40 @@
 .frame{
 width:min(calc(100% - 192px),var(--width-page));
 margin:0 auto;
+padding:var(--space-96) 0 var(--space-48);
+}
+
+/* 12-column grid */
+.grid{
+display:grid;
+grid-template-columns:repeat(12, minmax(0, 1fr));
+gap:var(--space-24);
+}
+
+/* Column placement utilities */
+.g-col-2-9{ grid-column:2 / span 9; }
+.g-col-2-7{ grid-column:2 / span 7; }
+.g-col-2-6{ grid-column:2 / span 6; }
+
+@media (max-width: 900px){
+  .frame{
+    width:calc(100% - 48px);
+    padding-top:var(--space-64);
+  }
+}
+
+@media (max-width: 640px){
+  .frame{
+    width:calc(100% - 40px);
+    padding-top:var(--space-48);
+  }
+  .grid{
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:var(--space-16);
+  }
+  .g-col-2-9,
+  .g-col-2-7,
+  .g-col-2-6{
+    grid-column:1 / -1;
+  }
 }
