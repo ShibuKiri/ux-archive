@@ -21,7 +21,7 @@ Rules
 /* Brand */
 --color-brand-primary:#245C73;
 --color-brand-hover:#1B4B5F;
---color-brand-tint-10:#EDF4F7;
+--color-brand-tint-10:#EEF4F7;
 --color-brand-tint-20:#D9E8EF;
 --color-text-on-brand:#FFFFFF;
 /* Font Family */
@@ -36,12 +36,14 @@ Rules
 --font-size-12:12px;
 --font-size-16:16px;
 --font-size-18:18px;
+--font-size-20:20px;
 --font-size-40:40px;
 /* Line Height */
 --line-height-16:16px;
 --line-height-20:20px;
 --line-height-24:24px;
 --line-height-28:28px;
+--line-height-32:32px;
 --line-height-48:48px;
 /* Letter Spacing */
 --letter-spacing-tight:-.025em;
@@ -50,6 +52,8 @@ Rules
 /* Semantic Type */
 --display-size:var(--font-size-40);
 --display-line-height:var(--line-height-48);
+--lead-large-size:var(--font-size-20);
+--lead-large-line-height:var(--line-height-32);
 --lead-size:var(--font-size-18);
 --lead-line-height:var(--line-height-28);
 --body-size:var(--font-size-16);
