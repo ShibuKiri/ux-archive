@@ -1,0 +1,4 @@
+.frame{
+width:min(calc(100% - 192px),var(--width-page));
+margin:0 auto;
+}
