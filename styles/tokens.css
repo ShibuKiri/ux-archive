@@ -1,0 +1,94 @@
+/*
+──────────────────────────────────────
+UX Archive Design System v1.0
+Rules
+• Foundation tokens are never used directly inside components.
+• Components consume semantic/component tokens.
+• Utilities always start with "u-".
+• Colors are named by role, never by hue.
+• Spacing is numeric only.
+──────────────────────────────────────
+*/
+:root{
+/* Background */
+--color-background-primary:#F7F7F5;
+--color-background-secondary:#FFFFFF;
+/* Border */
+--color-border-primary:#E5E4DF;
+/* Text */
+--color-text-primary:#161616;
+--color-text-secondary:#72706B;
+/* Brand */
+--color-brand-primary:#245C73;
+--color-brand-hover:#1B4B5F;
+--color-brand-tint-10:#EDF4F7;
+--color-brand-tint-20:#D9E8EF;
+--color-text-on-brand:#FFFFFF;
+/* Font Family */
+--font-family-sans:"Hanken Grotesk",sans-serif;
+--font-family-mono:"IBM Plex Mono",monospace;
+/* Font Weight */
+--font-weight-regular:400;
+--font-weight-medium:500;
+--font-weight-semibold:600;
+/* Font Size */
+--font-size-11:11px;
+--font-size-12:12px;
+--font-size-16:16px;
+--font-size-18:18px;
+--font-size-40:40px;
+/* Line Height */
+--line-height-16:16px;
+--line-height-20:20px;
+--line-height-24:24px;
+--line-height-28:28px;
+--line-height-48:48px;
+/* Letter Spacing */
+--letter-spacing-tight:-.025em;
+--letter-spacing-normal:0;
+--letter-spacing-wide:.06em;
+/* Semantic Type */
+--display-size:var(--font-size-40);
+--display-line-height:var(--line-height-48);
+--lead-size:var(--font-size-18);
+--lead-line-height:var(--line-height-28);
+--body-size:var(--font-size-16);
+--body-line-height:var(--line-height-20);
+--body-comfortable-line-height:var(--line-height-24);
+--mono-size:var(--font-size-12);
+--mono-line-height:var(--line-height-16);
+--micro-size:var(--font-size-11);
+--micro-line-height:var(--line-height-16);
+/* Space */
+--space-4:4px;
+--space-8:8px;
+--space-12:12px;
+--space-16:16px;
+--space-24:24px;
+--space-32:32px;
+--space-48:48px;
+--space-64:64px;
+--space-96:96px;
+/* Radius */
+--radius-2:2px;
+--radius-4:4px;
+--radius-full:9999px;
+/* Width */
+--width-page:1012px;
+--width-reading:640px;
+--width-title:560px;
+/* Border */
+--border-primary:1px solid var(--color-border-primary);
+/* Motion */
+--duration-fast:150ms;
+--duration-normal:300ms;
+--ease-standard:ease;
+/* Z-index */
+--z-base:0;
+--z-dropdown:10;
+--z-modal:100;
+--z-overlay:1000;
+/* Component Tokens */
+--button-padding-x:var(--space-24);
+--button-padding-y:var(--space-16);
+}
