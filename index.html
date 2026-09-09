@@ -37,7 +37,7 @@
 
       <main class="archive g-col-2-9 u-mt-96 u-pt-32 u-border-top" aria-labelledby="archive-title">
         <div class="u-flex u-justify-between u-items-baseline u-mb-24">
-          <div class="text-mono u-font-medium" id="archive-title">Archive</div>  
+          <div class="text-mono u-font-medium" id="archive-title">Archive</div>
           <div class="text-micro u-secondary" id="archive-count">13 entries</div>
         </div>
 
@@ -125,7 +125,7 @@
           <span class="text-body u-secondary">Enterprise decision-makers</span>
         </a>
 
-        <button id="toggle-reviews" class="button button--outline button--mono u-mt-32" type="button">
+        <button id="toggle-reviews" class="text-mono u-font-medium u-secondary u-underline u-hover-brand u-mt-24" type="button">
           SEE MORE REVIEWS
         </button>
       </main>
@@ -135,7 +135,7 @@
         <p class="text-body-comfortable u-secondary u-mt-24 u-width-reading">
           An overview of what’s included, how the review is structured, and what to expect.
         </p>
-        <a class="button button--outline button--mono u-mt-32" href="work-with-me/">
+        <a class="text-mono u-font-medium u-secondary u-underline u-hover-brand u-mt-24" href="work-with-me/">
           SEE HOW IT WORKS
         </a>
       </section>
@@ -162,7 +162,7 @@
       const toggleBtn = document.getElementById('toggle-reviews');
 
       if (!toggleBtn || reviewCases.length === 0) return;
-      
+
       function updateVisibility() {
         reviewCases.forEach((item, index) => {
           if (index < visibleCount) {
@@ -171,27 +171,27 @@
             item.classList.add('u-hidden');
           }
         });
-      
+
         const total = reviewCases.length;
         const countEl = document.getElementById('archive-count');
-      
+
         if (countEl) {
-          if (visibleCount >= total) {  
+          if (visibleCount >= total) {
             countEl.textContent = `${total} entries`;
           } else {
             countEl.textContent = `Showing ${visibleCount} of ${total}`;
           }
         }
-      
+
         if (visibleCount >= total) {
-          toggleBtn.textContent = 'SHOW LESS ↑';
+          toggleBtn.textContent = 'SHOW LESS';
         } else {
-          toggleBtn.textContent = 'SEE MORE REVIEWS →';
+          toggleBtn.textContent = 'SEE MORE REVIEWS';
         }
       }
 
-      toggleBtn.addEventListener('click', () => {  
-        if (visibleCount >= reviewCases.length) {  
+      toggleBtn.addEventListener('click', () => {
+        if (visibleCount >= reviewCases.length) {
           visibleCount = batchSize;
         } else {
           visibleCount += batchSize;
