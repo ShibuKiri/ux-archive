@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="canonical" href="https://shibukiri.github.io/ux-archive/">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A running record of independent product analysis.">
   <title>UX Archive — by ShibuKiri</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://shibukiri.github.io/ux-archive/">
+
+  <meta name="theme-color" content="#F7F7F5">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,10 +35,10 @@
         <p class="text-lead u-secondary u-mt-24">Focused reviews of specific product surfaces, flows, and decisions — documented as a growing archive.</p>
       </section>
 
-      <main class="g-col-2-9 u-mt-96 u-pt-32 u-border-top" aria-labelledby="archive-title">
+      <main class="archive g-col-2-9 u-mt-96 u-pt-32 u-border-top" aria-labelledby="archive-title">
         <div class="u-flex u-justify-between u-items-baseline u-mb-24">
-          <div class="text-mono u-font-medium" id="archive-title">Archive</div>
-          <div class="text-micro u-secondary">13 entries</div>
+          <div class="text-mono u-font-medium" id="archive-title">Archive</div>  
+          <div class="text-micro u-secondary" id="archive-count">13 entries</div>
         </div>
 
         <div class="archive-columns" aria-hidden="true">
@@ -46,85 +47,98 @@
           <span class="text-micro u-secondary">Role</span>
         </div>
 
-        <a class="case" href="reviews/001-zama/">
-          <span class="text-mono u-secondary">R-001</span>
-          <span class="text-lead-large">Zama</span>
-          <span class="text-body u-secondary">Enterprise decision-makers</span>
-        </a>
-        
-        <a class="case" href="reviews/002-copperx/">
-          <span class="text-mono u-secondary">R-002</span>
-          <span class="text-lead-large">Copperx</span>
-          <span class="text-body u-secondary">Product &amp; business teams</span>
-        </a>
-        
-        <a class="case" href="reviews/003-bleap/">
-          <span class="text-mono u-secondary">R-003</span>
-          <span class="text-lead-large">Bleap</span>
-          <span class="text-body u-secondary">Everyday finance users</span>
-        </a>
-        
-        <a class="case" href="reviews/004-qonto/">
-          <span class="text-mono u-secondary">R-004</span>
-          <span class="text-lead-large">Qonto</span>
-          <span class="text-body u-secondary">Business owners</span>
-        </a>
-        
-        <a class="case" href="reviews/005-spektr/">
-          <span class="text-mono u-secondary">R-005</span>
-          <span class="text-lead-large">Spektr</span>
-          <span class="text-body u-secondary">Compliance &amp; risk teams</span>
-        </a>
-        
-        <a class="case" href="reviews/006-shareid/">
-          <span class="text-mono u-secondary">R-006</span>
-          <span class="text-lead-large">ShareID</span>
-          <span class="text-body u-secondary">Enterprise buyers</span>
-        </a>
-        
-        <a class="case" href="reviews/007-spiko/">
-          <span class="text-mono u-secondary">R-007</span>
-          <span class="text-lead-large">Spiko</span>
-          <span class="text-body u-secondary">Treasury decision-makers</span>
-        </a>
-        
-        <a class="case" href="reviews/008-deblock/">
-          <span class="text-mono u-secondary">R-008</span>
-          <span class="text-lead-large">Deblock</span>
-          <span class="text-body u-secondary">Product &amp; design teams</span>
-        </a>
-        
-        <a class="case" href="reviews/009-finom/">
-          <span class="text-mono u-secondary">R-009</span>
-          <span class="text-lead-large">Finom</span>
-          <span class="text-body u-secondary">SMB owners</span>
-        </a>
-        
-        <a class="case" href="reviews/010-9fin/">
-          <span class="text-mono u-secondary">R-010</span>
-          <span class="text-lead-large">9fin</span>
-          <span class="text-body u-secondary">Buyside credit investors</span>
-        </a>
-        
-        <a class="case" href="reviews/011-cino/">
-          <span class="text-mono u-secondary">R-011</span>
-          <span class="text-lead-large">Cino</span>
-          <span class="text-body u-secondary">Person in a couple</span>
-        </a>
-        
-        <a class="case" href="reviews/012-sardine/">
-          <span class="text-mono u-secondary">R-012</span>
-          <span class="text-lead-large">Sardine</span>
-          <span class="text-body u-secondary">Risk leader</span>
-        </a>
-        
         <a class="case" href="reviews/013-crediblex/">
           <span class="text-mono u-secondary">R-013</span>
           <span class="text-lead-large">CredibleX</span>
           <span class="text-body u-secondary">Digital platform</span>
         </a>
-        
+
+        <a class="case" href="reviews/012-sardine/">
+          <span class="text-mono u-secondary">R-012</span>
+          <span class="text-lead-large">Sardine</span>
+          <span class="text-body u-secondary">Risk leader</span>
+        </a>
+
+        <a class="case" href="reviews/011-cino/">
+          <span class="text-mono u-secondary">R-011</span>
+          <span class="text-lead-large">Cino</span>
+          <span class="text-body u-secondary">Person in a couple</span>
+        </a>
+
+        <a class="case" href="reviews/010-9fin/">
+          <span class="text-mono u-secondary">R-010</span>
+          <span class="text-lead-large">9fin</span>
+          <span class="text-body u-secondary">Buyside credit investors</span>
+        </a>
+
+        <a class="case" href="reviews/009-finom/">
+          <span class="text-mono u-secondary">R-009</span>
+          <span class="text-lead-large">Finom</span>
+          <span class="text-body u-secondary">SMB owners</span>
+        </a>
+
+        <a class="case" href="reviews/008-deblock/">
+          <span class="text-mono u-secondary">R-008</span>
+          <span class="text-lead-large">Deblock</span>
+          <span class="text-body u-secondary">Product &amp; design teams</span>
+        </a>
+
+        <a class="case" href="reviews/007-spiko/">
+          <span class="text-mono u-secondary">R-007</span>
+          <span class="text-lead-large">Spiko</span>
+          <span class="text-body u-secondary">Treasury decision-makers</span>
+        </a>
+
+        <a class="case" href="reviews/006-shareid/">
+          <span class="text-mono u-secondary">R-006</span>
+          <span class="text-lead-large">ShareID</span>
+          <span class="text-body u-secondary">Enterprise buyers</span>
+        </a>
+
+        <a class="case" href="reviews/005-spektr/">
+          <span class="text-mono u-secondary">R-005</span>
+          <span class="text-lead-large">Spektr</span>
+          <span class="text-body u-secondary">Compliance &amp; risk teams</span>
+        </a>
+
+        <a class="case" href="reviews/004-qonto/">
+          <span class="text-mono u-secondary">R-004</span>
+          <span class="text-lead-large">Qonto</span>
+          <span class="text-body u-secondary">Business owners</span>
+        </a>
+
+        <a class="case" href="reviews/003-bleap/">
+          <span class="text-mono u-secondary">R-003</span>
+          <span class="text-lead-large">Bleap</span>
+          <span class="text-body u-secondary">Everyday finance users</span>
+        </a>
+
+        <a class="case" href="reviews/002-copperx/">
+          <span class="text-mono u-secondary">R-002</span>
+          <span class="text-lead-large">Copperx</span>
+          <span class="text-body u-secondary">Product &amp; business teams</span>
+        </a>
+
+        <a class="case" href="reviews/001-zama/">
+          <span class="text-mono u-secondary">R-001</span>
+          <span class="text-lead-large">Zama</span>
+          <span class="text-body u-secondary">Enterprise decision-makers</span>
+        </a>
+
+        <button id="toggle-reviews" class="text-mono u-font-medium u-secondary u-underline u-hover-brand u-mt-32" type="button">
+          SEE MORE REVIEWS →
+        </button>
       </main>
+
+      <section class="g-col-2-9 u-mt-96 u-pt-32 u-border-top" aria-labelledby="how-reviews-work">
+        <h2 id="how-reviews-work" class="text-mono u-font-medium">How the review works</h2>
+        <p class="text-body-comfortable u-secondary u-mt-24 u-width-reading">
+          An overview of what’s included, how the review is structured, and what to expect.
+        </p>
+        <a class="text-mono u-font-medium u-secondary u-underline u-hover-brand u-mt-24" href="work-with-me/">
+          SEE HOW IT WORKS →
+        </a>
+      </section>
 
       <footer class="footer g-col-2-9 u-mt-96 u-pt-24 u-border-top u-secondary">
         <div class="footer-left text-micro">Independent UX Archive</div>
@@ -139,5 +153,54 @@
 
     </div>
   </div>
+
+  <script>
+    (function () {
+      const reviewCases = Array.from(document.querySelectorAll('main.archive .case'));
+      const batchSize = 10;
+      let visibleCount = batchSize;
+      const toggleBtn = document.getElementById('toggle-reviews');
+
+      if (!toggleBtn || reviewCases.length === 0) return;
+      
+      function updateVisibility() {
+        reviewCases.forEach((item, index) => {
+          if (index < visibleCount) {
+            item.classList.remove('u-hidden');
+          } else {
+            item.classList.add('u-hidden');
+          }
+        });
+      
+        const total = reviewCases.length;
+        const countEl = document.getElementById('archive-count');
+      
+        if (countEl) {
+          if (visibleCount >= total) {  
+            countEl.textContent = `${total} entries`;
+          } else {
+            countEl.textContent = `Showing ${visibleCount} of ${total}`;
+          }
+        }
+      
+        if (visibleCount >= total) {
+          toggleBtn.textContent = 'SHOW LESS ↑';
+        } else {
+          toggleBtn.textContent = 'SEE MORE REVIEWS →';
+        }
+      }
+
+      toggleBtn.addEventListener('click', () => {  
+        if (visibleCount >= reviewCases.length) {  
+          visibleCount = batchSize;
+        } else {
+          visibleCount += batchSize;
+        }
+        updateVisibility();
+      });
+
+      updateVisibility();
+    })();
+  </script>
 </body>
 </html>
