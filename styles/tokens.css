@@ -32,12 +32,16 @@ Rules
 --font-weight-medium:500;
 --font-weight-semibold:600;
 /* Font Size */
+--font-size-10:10px;
 --font-size-11:11px;
 --font-size-12:12px;
+--font-size-14:14px;
 --font-size-16:16px;
 --font-size-18:18px;
 --font-size-20:20px;
+--font-size-24:24px;
 --font-size-40:40px;
+--font-size-64:64px;
 /* Line Height */
 --line-height-16:16px;
 --line-height-20:20px;
@@ -45,24 +49,38 @@ Rules
 --line-height-28:28px;
 --line-height-32:32px;
 --line-height-48:48px;
+--line-height-72:72px;
 /* Letter Spacing */
+--letter-spacing-tighter:-.03em;
 --letter-spacing-tight:-.025em;
 --letter-spacing-normal:0;
+--letter-spacing-loose:.005em;
 --letter-spacing-wide:.06em;
 /* Semantic Type */
+--display-large-size:var(--font-size-64);
+--display-large-line-height:var(--line-height-72);
 --display-size:var(--font-size-40);
 --display-line-height:var(--line-height-48);
+--heading-large-size:var(--font-size-24);
+--heading-large-line-height:var(--line-height-32);
+--heading-size:var(--font-size-20);
+--heading-line-height:var(--line-height-28);
 --lead-large-size:var(--font-size-20);
 --lead-large-line-height:var(--line-height-32);
 --lead-size:var(--font-size-18);
 --lead-line-height:var(--line-height-28);
 --body-size:var(--font-size-16);
---body-line-height:var(--line-height-20);
---body-comfortable-line-height:var(--line-height-24);
+--body-line-height:var(--line-height-24);
+--body-small-size:var(--font-size-14);
+--body-small-line-height:var(--line-height-20);
+--mono-large-size:var(--font-size-14);
+--mono-large-line-height:var(--line-height-20);
 --mono-size:var(--font-size-12);
 --mono-line-height:var(--line-height-16);
 --micro-size:var(--font-size-11);
 --micro-line-height:var(--line-height-16);
+--micro-small-size:var(--font-size-10);
+--micro-small-line-height:var(--line-height-16);
 /* Space */
 --space-4:4px;
 --space-8:8px;
